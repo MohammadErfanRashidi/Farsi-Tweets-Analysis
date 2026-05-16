@@ -1,0 +1,106 @@
+0. problem statement 
+	the goal of this project is to scrape the tweets of Persian community on 
+	X platform to compare the sentiment analysis and word frequencies in 
+	topics and out of topics in three distinct time intervals to gain insights
+	of the effects of recent events in Iran had on the way the community 
+	posted their tweets and how or up to what extent they have been impacted.
+	the data for the project is collected via the most well-known Telegram 
+	channels in Farsi spoken community that reflect the most viral tweets 
+	from X platform. the said data has gone through cleaning and processing 
+	in order to go under analysis and the entire workflow of the project is 
+	explained below step by step.
+
+1. create git repo
+	1.1 clone to the local device 
+	1.2 create a virtual env for python dependencies 
+	1.3 add git ignore for python 
+	
+2. data scraping parameters
+	2.1 choose between Telegram as our main source of data
+	2.2 find 3-5 related channel with minimum censor and bias
+	2.3 decide on time intervals, like [1404 - Dey - Esfand - Present] 
+		2.3.1 makes 2-3 bins of time series
+
+3. dependencies 
+	3.1 create requirements file
+	3.2 for now import basic libraries like pandas, matplotlib, numpy...
+	
+4. data acquisition 
+	4.1 visit telegram official website
+	4.2 get API and credentials or authentication 
+	4.3 do a demo scraping for test and log in 
+	4.4 upon succeeding, scrape the content based on timing intervals in 2.3
+	4.5 save and store the raw data in /data/ directory 
+	
+5. data cleansing 
+	5.1 create a cleaning notebook in /notebooks/ directory
+	5.2 extract the content of each tweet without the writer name underneath
+	5.3 check for duplicates and remove them
+	5.4 get rid of emojis, urls or any useless text in the dataset
+	5.5 check for English texts in our dataset and also remove those 
+	5.6 save the cleaned the dataset in /data/ dir
+	
+6. EDA
+	6.1 create a EDA notebook 
+	6.2 tokenize tweets 
+	6.3 create parts of speech (pos) tags for nouns and verbs etc.
+	6.4 create NER tags and NER palette 
+	6.5 plot most frequent tokens and hue of NER tags for each timeline
+	
+7. pre-processing
+	7.1 create the notebook and use cleaned data
+	7.2 remove punct via Regex 
+	7.3 remove stopwords (exclude negative stopwords)
+	7.4 tokenize the pre-processed data
+	7.5 lemmatizing or stemming, lemm is preferred for content
+	7.6 check for unigrams, here reall most frequent words appear
+	7.7 plot the most frequent for each timeline
+	7.8 check for bigrams or even trigrams for most frequent 
+	7.9 save the pre-processed data in /data/ dir
+	
+8. sentiment analysis 
+	8.1 create the notebook and use pre-processed data
+	8.2 find models for sent score in Persian
+	8.3 use three models to score the tweets for neg and pos
+	8.4 create bins of [-1, -0.1, 0.1, 1] for neg, neut, pos labels
+	8.5 out of 3 models, choose the label that 2 of 3 show
+	8.6 plot pos, neg, and neut labels for each timeline and compare
+	8.7 save the new data in /data/ as labeled data
+	
+9. topics analysis for each timeline
+	9.1 create the notebook
+	9.2 create a dictionary of all words for each timeline 
+	9.3 bag of words for each timeline showing each word freq
+	9.4 get coherence score from a minimum of 2 to say 10 topics
+	9.5 train LDA model to rate the topics 
+	9.6 compute coh score for the number of topics 
+	9.7 plot the number with their score to choose the optimum for each time
+	9.8 choose the best number of topics 
+	9.9 see the n number of most common words for topics for each time
+	9.10 use tf.idf corp to do the same thing again 
+	9.11 save the dataset 
+	
+10. report
+	10.1 create a final report notebook
+	10.2 explain the findings with the plots of before and after timlines
+	10.3 export the final notebook as pdf for our final report
+	
+11. summary and presentation 
+	11.1 write the readme file and explain the workflow 
+	11.2 share the results and findings on it
+	11.3 link to the workflow 
+	11.4 write an essay at the end to transfer your insight of the findings 
+	
+12. push and publish
+	12.1 add and commit any remaining step 
+	12.2 push to github 
+	12.3 tweak the settings of the repo on the website 
+	12.4 add topics and description for the repo
+	
+	
+	
+ 	
+	
+	
+	
+
