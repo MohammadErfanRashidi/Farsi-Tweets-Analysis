@@ -18,8 +18,8 @@
 2. data scraping parameters
 	2.1 choose between Telegram as our main source of data
 	2.2 find 3-5 related channel with minimum censor and bias
-	2.3 decide on time intervals, like [1404 - Dey - Esfand - Present] 
-		2.3.1 makes 2-3 bins of time series
+	2.3 decide on time intervals, 24 jun - 28 dec - 28 feb - Present
+		2.3.1 bins names = 1st war - dey, dey - 2nd war, 2nd war - Now 
 
 3. dependencies 
 	3.1 create requirements file
