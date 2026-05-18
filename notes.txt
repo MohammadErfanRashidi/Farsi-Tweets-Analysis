@@ -48,8 +48,9 @@ pre-processing
 	- Remove punctuation
 	- Remove (), [], ;, : and etc. because they are used as emojis
 	- Deal with semi-space before and after words
-	- Remove stopwords
+	- Remove stopwords, keep negative stopwords for content
 	- Tokenize 
+	- Check for non-Persian words after tokenization and drop them 
 	- Stemming
 	- Create parts of speech tags
 	- NER tags and palette
