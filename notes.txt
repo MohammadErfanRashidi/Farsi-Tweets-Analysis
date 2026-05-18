@@ -1,4 +1,4 @@
-0. problem statement 
+problem statement 
 	the goal of this project is to scrape the tweets of Persian community on 
 	X platform to compare the sentiment analysis and word frequencies in 
 	topics and out of topics in three distinct time intervals to gain insights
@@ -10,54 +10,58 @@
 	in order to go under analysis and the entire workflow of the project is 
 	explained below step by step.
 
-1. create git repo
-	1.1 clone to the local device 
-	1.2 create a virtual env for python dependencies 
-	1.3 add git ignore for python 
+create git repo
+	- clone to the local device
+	- add the virtual env
+	- add requirements file
+	- add gitignore for Python
+	- add README
 	
-2. data scraping parameters
-	2.1 choose between Telegram as our main source of data
-	2.2 find 3-5 related channel with minimum censor and bias
-	2.3 decide on time intervals, 24 jun - 28 dec - 28 feb - Present
-		2.3.1 bins names = 1st war - dey, dey - 2nd war, 2nd war - Now 
+data scraping
+	 - use beautiful soup for data scraping
+	 - use a optimum Telegram channel with widest coverage
+	 - save the datasets in three 
+	TIMELINES = {
+	    'timeline_1_2025_Jun24_Dec28': {
+		'start': datetime(2025, 6, 24, tzinfo = timezone.utc),
+		'end': datetime(2025, 12, 28, 23, 59, 59, tzinfo = timezone.utc)
+	    },
+	    'timeline_2_2025_Dec29_2026_Feb28': {
+		'start': datetime(2025, 12, 29, tzinfo = timezone.utc),
+		'end': datetime(2026, 2, 28, 23, 59, 59, tzinfo = timezone.utc)
+	    },
+	    'timeline_3_2026_Mar01_May16': {
+		'start': datetime(2026, 3, 1, tzinfo = timezone.utc),
+		'end': datetime(2026, 5, 16, 23, 59, 59, tzinfo = timezone.utc)
+	    }    
+	}
+	 
+data cleansing 
+	- Combine all three datasets with their labels
+	- Extract the main text of the tweet without the channel name and writer username
+	- Remove duplicates if there's any
+	- Do deep cleaning, URLs, Hashtags, ...
+	- Remove empty messages 
+	- Remove short messages
 
-3. dependencies 
-	3.1 create requirements file
-	3.2 for now import basic libraries like pandas, matplotlib, numpy...
-	
-4. data acquisition 
-	4.1 visit telegram official website
-	4.2 get API and credentials or authentication 
-	4.3 do a demo scraping for test and log in 
-	4.4 upon succeeding, scrape the content based on timing intervals in 2.3
-	4.5 save and store the raw data in /data/ directory 
-	
-5. data cleansing 
-	5.1 create a cleaning notebook in /notebooks/ directory
-	5.2 extract the content of each tweet without the writer name underneath
-	5.3 check for duplicates and remove them
-	5.4 get rid of emojis, urls or any useless text in the dataset
-	5.5 check for English texts in our dataset and also remove those 
-	5.6 save the cleaned dataset in /data/ dir
-	
-6. EDA
-	6.1 create a EDA notebook 
-	6.2 tokenize tweets 
-	6.3 create parts of speech (pos) tags for nouns and verbs etc.
-	6.4 create NER tags and NER palette 
-	6.5 plot most frequent tokens and hue of NER tags for each timeline
-	
-7. pre-processing
-	7.1 create the notebook and use cleaned data
-	7.2 remove punct via Regex 
-	7.3 remove stopwords (exclude negative stopwords)
-	7.4 tokenize the pre-processed data
-	7.5 lemmatizing or stemming, lemm is preferred for content
-	7.6 check for unigrams, here reall most frequent words appear
-	7.7 plot the most frequent for each timeline
-	7.8 check for bigrams or even trigrams for most frequent 
-	7.9 save the pre-processed data in /data/ dir
-	
+pre-processing
+	- Remove punctuation
+	- Remove (), [], ;, : and etc. because they are used as emojis
+	- Deal with semi-space before and after words
+	- Remove stopwords
+	- Tokenize 
+	- Stemming
+	- Create parts of speech tags
+	- NER tags and palette
+
+EDA
+	- plot the most frequent unigram (token) for each timeline
+	- plot the most freq POS of each timeline
+	- plot the most freq NER of each timeline
+	- plot the most freq unigram with hue of POS
+	- plot the most freq unigram with hue of NER
+	- Plot bigrams and trigrams for each timeline
+		
 8. sentiment analysis 
 	8.1 create the notebook and use pre-processed data
 	8.2 find models for sent score in Persian
@@ -66,6 +70,9 @@
 	8.5 out of 3 models, choose the label that 2 of 3 show
 	8.6 plot pos, neg, and neut labels for each timeline and compare
 	8.7 save the new data in /data/ as labeled data
+	
+K-means or KNN neighbors
+
 	
 9. topics analysis for each timeline
 	9.1 create the notebook

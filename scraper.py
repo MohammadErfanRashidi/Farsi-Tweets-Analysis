@@ -1,7 +1,7 @@
 '''
-Telegram Channel Scraper
-Scrapes without API key
-Saves three separate CSV file for timelines
+TO DO
+
+- Scrape the messages of the predefined timelines in three datasets
 '''
 
 
