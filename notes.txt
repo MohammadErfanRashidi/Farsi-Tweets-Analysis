@@ -38,7 +38,7 @@
 	5.3 check for duplicates and remove them
 	5.4 get rid of emojis, urls or any useless text in the dataset
 	5.5 check for English texts in our dataset and also remove those 
-	5.6 save the cleaned the dataset in /data/ dir
+	5.6 save the cleaned dataset in /data/ dir
 	
 6. EDA
 	6.1 create a EDA notebook 
