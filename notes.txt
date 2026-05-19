@@ -74,6 +74,8 @@ EDA
 	8.7 save the new data in /data/ as labeled data
 	
 K-means or KNN neighbors
+	- create the model for KNN and k-means for classification
+	- compare the classes with timelines to see if there is any difference
 
 	
 9. topics analysis for each timeline
