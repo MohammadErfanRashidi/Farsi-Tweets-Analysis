@@ -52,10 +52,11 @@ pre-processing
 	- Tokenize 
 	- Check for non-Persian words after tokenization and drop them 
 	- Stemming
-	- Create parts of speech tags
-	- NER tags and palette
+	
 
 EDA
+	- Create parts of speech tags
+	- NER tags and palette
 	- plot the most frequent unigram (token) for each timeline
 	- plot the most freq POS of each timeline
 	- plot the most freq NER of each timeline
