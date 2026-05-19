@@ -48,20 +48,15 @@ pre-processing
 	- Remove punctuation
 	- Remove (), [], ;, : and etc. because they are used as emojis
 	- Deal with semi-space before and after words
-	- Remove stopwords, keep negative stopwords for content
 	- Tokenize 
 	- Check for non-Persian words after tokenization and drop them 
 	- Stemming
-	
+	- Remove stopwords, keep negative stopwords for content
 
 EDA
-	- Create parts of speech tags
-	- NER tags and palette
 	- plot the most frequent unigram (token) for each timeline
-	- plot the most freq POS of each timeline
-	- plot the most freq NER of each timeline
-	- plot the most freq unigram with hue of POS
-	- plot the most freq unigram with hue of NER
+	- show the most freq unigrams POS
+	- show the most freq unigrams NER
 	- Plot bigrams and trigrams for each timeline
 		
 8. sentiment analysis 
