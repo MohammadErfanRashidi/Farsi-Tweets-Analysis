@@ -33,3 +33,5 @@ Frequent bigrams are مردم ایران (people of Iran), اینترنت وصل
 
 A chi‑square test of independence confirmed that the proportion of positive tweets differed across timelines (p < 0.05). Pairwise comparisons with Bonferroni correction showed that the decline in positive sentiment from Timeline 1 to Timeline 2 was statistically significant (p < 0.001), as was the overall decline from Timeline 1 to Timeline 3 (p < 0.001). The observed increase from Timeline 2 to Timeline 3 was not statistically significant (p = 0.26), indicating that the positivity level remained low after the initial drop.
 
+it was expected that in the tl2 the pos rate would increase, though it did, still did not show any significant increase so it could be purely random and no meanings could be behind it
+the hypothesis was that tl2 would make people way more depressed and angry, and they would long for the start of tl3, meaning if tl3 happened, it would satisfy their desires and would eventually end up making them happier, but we see that this did not happen and the writers remained as upset as in tl2 without any notable difference.
