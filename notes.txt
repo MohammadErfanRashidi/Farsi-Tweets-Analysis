@@ -10,97 +10,102 @@ problem statement
 	in order to go under analysis and the entire workflow of the project is 
 	explained below step by step.
 
+
 create git repo
-	- clone to the local device
-	- add the virtual env
-	- add requirements file
-	- add gitignore for Python
-	- add README
+
+- clone to the local device
+- add the virtual env
+- add requirements file
+- add gitignore for Python
+- add README
+	
 	
 data scraping
-	 - use beautiful soup for data scraping
-	 - use a optimum Telegram channel with widest coverage
-	 - save the datasets in three 
-	TIMELINES = {
-	    'timeline_1_2025_Jun24_Dec28': {
-		'start': datetime(2025, 6, 24, tzinfo = timezone.utc),
-		'end': datetime(2025, 12, 28, 23, 59, 59, tzinfo = timezone.utc)
-	    },
-	    'timeline_2_2025_Dec29_2026_Feb28': {
-		'start': datetime(2025, 12, 29, tzinfo = timezone.utc),
-		'end': datetime(2026, 2, 28, 23, 59, 59, tzinfo = timezone.utc)
-	    },
-	    'timeline_3_2026_Mar01_May16': {
-		'start': datetime(2026, 3, 1, tzinfo = timezone.utc),
-		'end': datetime(2026, 5, 16, 23, 59, 59, tzinfo = timezone.utc)
-	    }    
-	}
+
+ - use beautiful soup for data scraping
+ - use a optimum Telegram channel with widest coverage
+ - save the datasets in three 
+ - TIMELINES = {
+    'timeline_1_2025_Jun24_Dec28': {
+        'start': datetime(2025, 6, 24, tzinfo = timezone.utc),
+        'end': datetime(2025, 12, 28, 23, 59, 59, tzinfo = timezone.utc)
+    },
+    'timeline_2_2025_Dec29_2026_Feb28': {
+        'start': datetime(2025, 12, 29, tzinfo = timezone.utc),
+        'end': datetime(2026, 2, 28, 23, 59, 59, tzinfo = timezone.utc)
+    },
+    'timeline_3_2026_Mar01_May16': {
+        'start': datetime(2026, 3, 1, tzinfo = timezone.utc),
+        'end': datetime(2026, 5, 16, 23, 59, 59, tzinfo = timezone.utc)
+    }    
+}
+	 
 	 
 data cleansing 
-	- Combine all three datasets with their labels
-	- Extract the main text of the tweet without the channel name and writer username
-	- Remove duplicates if there's any
-	- Do deep cleaning, URLs, Hashtags, ...
-	- Remove empty messages 
-	- Remove short messages
+
+- Combine all three datasets with their labels
+- Extract the main text of the tweet without the channel name and writer username
+- Remove duplicates if there's any
+- Do deep cleaning, URLs, Hashtags, ...
+- Remove empty messages 
+- Remove short messages
+
 
 pre-processing
-	- Remove punctuation
-	- Remove (), [], ;, : and etc. because they are used as emojis
-	- Deal with semi-space before and after words
-	- Tokenize 
-	- Check for non-Persian words after tokenization and drop them 
-	- Stemming
-	- Remove stopwords, keep negative stopwords for content
+
+- Remove punctuation
+- Remove (), [], ;, : and etc. because they are used as emojis
+- Deal with semi-space before and after words
+- Tokenize 
+- Check for non-Persian words after tokenization and drop them 
+- Stemming
+- Remove stopwords, keep negative stopwords for content
+
 
 EDA
-	- plot top 10 words per each tl
-	- hue top 50 words per each tl with POS
-	- hue top 50 words per each tl with NER
-	- plot top 10 bigrams per each tl
+
+- plot top 10 words per each tl
+- hue top 50 words per each tl with POS
+- hue top 50 words per each tl with NER
+- plot top 10 bigrams per each tl
 		
-8. sentiment analysis 
-	8.1 create the notebook and use pre-processed data
-	8.2 find models for sent score in Persian
-	8.3 use three models to score the tweets for neg and pos
-	8.4 create bins of [-1, -0.1, 0.1, 1] for neg, neut, pos labels
-	8.5 out of 3 models, choose the label that 2 of 3 show
-	8.6 plot pos, neg, and neut labels for each timeline and compare
-	8.7 save the new data in /data/ as labeled data
+		
+sentiment analysis 
+
+- use 3 models to rate each tweet 
+- mean the scores for each tweet
+- create bins of [-1, -0.1, 0.1, 1] for neg, neut, pos labels
+- plot the categories for each timeline
+- If tl2 shows decrease in pos, and also increase in pos in tl3, is the difference statistically meaningful?
+	
 	
 K-means or KNN neighbors
-	- vectorize top 50 words for each tl
-	- plot them on a chart and compare the classes
+
+- vectorize top 50 words for each tl
+- plot them on a chart and compare the classes
 	
-9. topics analysis for each timeline
-	9.1 create the notebook
-	9.2 create a dictionary of all words for each timeline 
-	9.3 bag of words for each timeline showing each word freq
-	9.4 get coherence score from a minimum of 2 to say 10 topics
-	9.5 train LDA model to rate the topics 
-	9.6 compute coh score for the number of topics 
-	9.7 plot the number with their score to choose the optimum for each time
-	9.8 choose the best number of topics 
-	9.9 see the n number of most common words for topics for each time
-	9.10 use tf.idf corp to do the same thing again 
-	9.11 save the dataset 
 	
-10. report
-	10.1 create a final report notebook
-	10.2 explain the findings with the plots of before and after timlines
-	10.3 export the final notebook as pdf for our final report
+report
+
+10.1 create a final report notebook
+10.2 explain the findings with the plots of before and after timlines
+10.3 export the final notebook as pdf for our final report
+
 	
-11. summary and presentation 
-	11.1 write the readme file and explain the workflow 
-	11.2 share the results and findings on it
-	11.3 link to the workflow 
-	11.4 write an essay at the end to transfer your insight of the findings 
+summary and presentation 
+
+11.1 write the readme file and explain the workflow 
+11.2 share the results and findings on it
+11.3 link to the workflow 
+11.4 write an essay at the end to transfer your insight of the findings 
+
 	
-12. push and publish
-	12.1 add and commit any remaining step 
-	12.2 push to github 
-	12.3 tweak the settings of the repo on the website 
-	12.4 add topics and description for the repo
+push and publish
+
+12.1 add and commit any remaining step 
+12.2 push to github 
+12.3 tweak the settings of the repo on the website 
+12.4 add topics and description for the repo
 	
 	
 	
