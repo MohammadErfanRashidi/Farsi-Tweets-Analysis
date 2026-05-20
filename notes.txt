@@ -54,10 +54,10 @@ pre-processing
 	- Remove stopwords, keep negative stopwords for content
 
 EDA
-	- plot the most frequent unigram (token) for each timeline
-	- show the most freq unigrams POS
-	- show the most freq unigrams NER
-	- Plot bigrams and trigrams for each timeline
+	- plot top 10 words per each tl
+	- hue top 50 words per each tl with POS
+	- hue top 50 words per each tl with NER
+	- plot top 10 bigrams per each tl
 		
 8. sentiment analysis 
 	8.1 create the notebook and use pre-processed data
@@ -69,9 +69,8 @@ EDA
 	8.7 save the new data in /data/ as labeled data
 	
 K-means or KNN neighbors
-	- create the model for KNN and k-means for classification
-	- compare the classes with timelines to see if there is any difference
-
+	- vectorize top 50 words for each tl
+	- plot them on a chart and compare the classes
 	
 9. topics analysis for each timeline
 	9.1 create the notebook
