@@ -35,3 +35,11 @@ A chi‑square test of independence confirmed that the proportion of positive tw
 
 it was expected that in the tl2 the pos rate would increase, though it did, still did not show any significant increase so it could be purely random and no meanings could be behind it
 the hypothesis was that tl2 would make people way more depressed and angry, and they would long for the start of tl3, meaning if tl3 happened, it would satisfy their desires and would eventually end up making them happier, but we see that this did not happen and the writers remained as upset as in tl2 without any notable difference.
+
+----------------------------------------
+
+t-sne showed no visible difference among timelines, indicating no change across them
+
+there is no visible distinction in stratified sampled t-SNE.
+
+sil score was almost zero in K-means for almost all clusters, showing extreme overlap among them

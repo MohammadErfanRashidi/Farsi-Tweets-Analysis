@@ -81,8 +81,8 @@ sentiment analysis
 	
 K-means or KNN neighbors
 
-- vectorize top 50 words for each tl
-- plot them on a chart and compare the classes
+- vectorize tweets for each timeline
+- plot them on a chart and compare the tls and see if there has been a shift among timelines
 	
 	
 report
