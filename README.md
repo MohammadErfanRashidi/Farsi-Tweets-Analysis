@@ -115,7 +115,7 @@ and custom regex rules. The full notebook is `notebooks/cleaning.ipynb`.
 
 The resulting **clean text** was stored in the column `normalized`, while tokenised
 and stemmed versions were saved as `tokens_persian` and `tokens_stemmed`.
-A combined cleaned dataset (`all_cleaned.csv`) and processed dataset (`all_processed.csv`) were saved after
+The cleaned dataset (`all_cleaned.csv`) and processed dataset (`all_processed.csv`) were saved after
 index resetting.
 
 ---
